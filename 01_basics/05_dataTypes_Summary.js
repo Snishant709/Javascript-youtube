@@ -16,7 +16,7 @@ console.log(BigNumber)
 // Non-Primitive (Pass by refernce)
 // Array,Objects,Functions (type of all this is object and type of function is function object to be specific)
 const heros=["shaktiman","Naagraj"]
-const myobj={
+const myobj1={
 nishant:32,
 age:1
 }
@@ -29,3 +29,26 @@ const myfunction=function()
     console.log("Hello Nishant")
 }
 console.log(typeof myobj)
+
+//************************************************************* 
+/*
+Stack(Premitive) Heap(Non-Premitive)
+
+
+example of Pass by  value
+let myname="Nishant"
+let anothername=myname
+anothername="Sharma"
+console.log(anothername)
+console.log(myname)
+*/
+
+//Example of Pass By Reference
+let userOne ={
+    email:"Nishant@gmail.com",
+    number:9702621749
+}
+let userTwo=userOne
+userTwo.email="sharma@gmail.com"
+console.log(userOne.email)
+console.log(userTwo.email)
