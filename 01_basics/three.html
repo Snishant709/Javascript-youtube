@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body style="color: white;">
+    
+</body>
+<script>
+const h1=document.createElement("h1")
+console.log(h1)
+h1.id="Nishant"
+h1.className="heading"
+h1.setAttribute("title","createdtitle")//for setting user defined Attribute
+h1.style.color="green"
+//h1.innerHTML="Nishant" avoid using this it will override the value
+const addtext=document.createTextNode("Nishant")
+h1.appendChild(addtext)
+document.body.appendChild(h1)
+</script>
+</html>
