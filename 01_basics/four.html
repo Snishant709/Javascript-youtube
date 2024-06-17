@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body style="background-color: lightgreen;color: white;">
+    <ul class="parent">
+        <li>
+            Javascript
+        </li>
+    </ul>
+</body>
+<script>
+    function addlang(lang)
+    {
+        const li=document.createElement("li")
+        li.appendChild(document.createTextNode(lang))
+        document.querySelector(".parent").appendChild(li)
+    }
+    //edit
+    
+    const list=document.querySelector("li:last-child")
+    const list_item=document.createElement("li")
+    list_item.textContent="PHP"
+    list.appendChild(list_item)
+
+    
+
+    // const edit=document.querySelector("li:nth-child(1)")
+    // const edit_item=document.createElement("li")
+    // edit_item.innerHTML="Mojo"
+    // edit.replaceWith(edit_item)
+
+    //remove
+    const rem=document.querySelector("li:first-child")
+    rem.remove()
+    addlang("Python")
+    addlang("C++")
+    addlang("JAVA")
+    </script>
+    
+</html>
