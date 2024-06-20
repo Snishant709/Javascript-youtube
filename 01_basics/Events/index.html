@@ -28,18 +28,30 @@
 //     e.stopPropagation()
 //    },false)
    //in case of passing the parameter true the propogation event occurs i.e 1)ul and then 2)owl
-   document.getElementById("images").addEventListener("click",function (e)
-   {console.log("ul is selected ")},true)
-   document.getElementById("owl").addEventListener("click",function (e)
-   {console.log("Owl clicked")
-   },true)
-   document.getElementById("google").addEventListener("click",function (e)
-   {
-    e.preventDefault()
-    console.log("Google clicked ")
-    e.stopPropagation()
-   },false)
-   
+//    document.getElementById("images").addEventListener("click",function (e)
+//    {console.log("ul is selected ")},true)
+//    document.getElementById("owl").addEventListener("click",function (e)
+//    {console.log("Owl clicked")
+//    },true)
+//    document.getElementById("google").addEventListener("click",function (e)
+//    {
+//     e.preventDefault()
+//     console.log("Google clicked ")
+//     e.stopPropagation()
+//    },false)
+    document.getElementById("images").addEventListener("click",function (e)
+    {
+        if(e.target.tagName==="IMG")
+        {
+            console.log(e.target.tagName)
+            console.log(e.target.id)
+            let removeit=e.target.parentNode
+            //removeit.parentNode.removeChild(removeit)
+            removeit.remove()
+
+        }
+
+    })   
 
 </script>
 </html>
