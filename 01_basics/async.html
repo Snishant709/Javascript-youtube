@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nishant Sharma </h1>
+    <button id="stop">Stop</button>
+    <script>
+        function sayNishant()
+        {
+            console.log("Nishant")
+        }
+        setTimeout(sayNishant,2000)//it will execute only once
+
+        const terminate=setTimeout(()=>{document.querySelector("h1").innerHTML="Nishant Bharat Sharma"},2000)
+        document.querySelector("#stop").addEventListener("click",function ()
+        {
+            clearTimeout(terminate)
+            console.log("Stopped")
+        })
+        
+    </script>
+</body>
+</html>

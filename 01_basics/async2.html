@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nishant Sharma </h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+   
+</body>
+<script>
+    //  function Interval(){
+    //     console.log("Nishant")
+    // }
+    // setInterval(Interval,2000)//without parameter
+    // function Interval(str){
+    //     console.log(str)
+    // }
+    // const start_button=setInterval(Interval,2000,"Nishant") //with parameter
+    // const end_button=setInterval(Interval,2000,"Nishant")
+    let stop;
+   
+    document.querySelector("#start").addEventListener("click",()=>{
+         stop=setInterval(()=>{console.log("Nishant")},2000,"Nishant")
+    })
+    document.querySelector("#stop").addEventListener("click",()=>{
+       clearInterval(stop)
+    })
+
+
+</script>
+</html>
