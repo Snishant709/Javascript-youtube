@@ -6,8 +6,8 @@
 </head>
 <body>
     <h1>Background changing color project</h1>
-    <input type="button" value="start">
-    <input type="button" value="stop">
+    <input type="button" value="start" class="start_button"></input>
+    <input type="button" value="stop" class="stop_button"></input>
 </body>
 <script>
  
@@ -23,5 +23,22 @@ const randomColor=function ()
     
 }
 console.log(randomColor());
+
+const changeColor=function ()
+{
+    let intervalId=setInterval(changeBgColor,1000);
+    function changeBgColor()
+    {
+        document.body.style.backgroundColor=randomColor();
+    }
+};
+const stopChangeColor=function ()
+{
+    clearInterval(intervalId);
+};
+document.querySelector(".start_button").addEventListener("click",changeColor);
+document.getElementById(".stop_button").addEventListener("click",stopChangeColor);
+
+
 </script>
 </html>
