@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Color Changing</title>
+</head>
+<body>
+    <h1>Background changing color project</h1>
+    <input type="button" value="start">
+    <input type="button" value="stop">
+</body>
+<script>
+ 
+const randomColor=function ()
+{
+    const hex='0123456789ABCDEF';
+    let color='#';
+    for (let i = 0;i< 6;i++) {
+         color+=hex[Math.floor(Math.random()*16)]
+         
+    }
+    return color;
+    
+}
+console.log(randomColor());
+</script>
+</html>
