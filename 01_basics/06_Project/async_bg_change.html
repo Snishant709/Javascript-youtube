@@ -22,22 +22,27 @@ const randomColor=function ()
     return color;
     
 }
-console.log(randomColor());
-
-const changeColor=function ()
+let intervalId;
+function startInterval()
 {
-    let intervalId=setInterval(changeBgColor,1000);
-    function changeBgColor()
+    if(!intervalId)
+    {
+        intervalId=setInterval(changeColor,1000);
+
+    }
+    function changeColor()
     {
         document.body.style.backgroundColor=randomColor();
     }
-};
-const stopChangeColor=function ()
+
+}
+function stopInterval()
 {
-    clearInterval(intervalId);
-};
-document.querySelector(".start_button").addEventListener("click",changeColor);
-document.getElementById(".stop_button").addEventListener("click",stopChangeColor);
+clearInterval(intervalId);
+intervalId=null;
+}
+document.querySelector(".start_button").addEventListener("click",startInterval);
+document.querySelector(".stop_button").addEventListener("click",stopInterval);
 
 
 </script>
