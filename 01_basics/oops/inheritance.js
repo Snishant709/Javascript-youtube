@@ -25,3 +25,11 @@ class Trader extends user{
 
 const u1=new Trader("Nishant","Nishant@gmail.com","Nishant@123").myProfessionName()
 console.log(u1)
+
+const u2=new user("Sharma")
+console.log(u2.myName())
+
+console.log(u1==u2)
+console.log(u2 instanceof user)
+console.log(u1 instanceof user)
+
